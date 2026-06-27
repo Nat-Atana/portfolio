@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nat-atana.freedev.app/sitemap.xml
+Sitemap: https://natatana.netlify.app/sitemap.xml
+LLMS: https://natatana.netlify.app/llms.txt

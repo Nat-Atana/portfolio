@@ -1,0 +1,33 @@
+# Nat Atana Portfolio
+
+> Senior AI Full-Stack Engineer and Technical Lead portfolio covering production AI systems, cloud architecture, full-stack product engineering, and selected case studies.
+
+## Site
+
+- URL: https://natatana.netlify.app/
+- Sitemap: https://natatana.netlify.app/sitemap.xml
+- Robots: https://natatana.netlify.app/robots.txt
+- Author: Nat Atana
+
+## Key Pages
+
+- Home: https://natatana.netlify.app/
+- Customer Support Copilot: https://natatana.netlify.app/case-studies/customer-support-copilot/
+- AI Accounting Platform: https://natatana.netlify.app/case-studies/ai-accounting-platform/
+- Workforce Scheduling System: https://natatana.netlify.app/case-studies/workforce-scheduling-system/
+
+## Topics
+
+- Production AI systems
+- Retrieval-augmented generation
+- AI copilots
+- Full-stack engineering
+- Cloud architecture
+- React, Node.js, Python, FastAPI, AWS, Kubernetes, PostgreSQL
+- Technical leadership
+
+## Contact
+
+- Email: natatana1213@gmail.com
+- LinkedIn: https://www.linkedin.com/in/nat-atana-964071418/
+- GitHub: https://github.com/Nat-Atana

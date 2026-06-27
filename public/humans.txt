@@ -1,0 +1,13 @@
+/* TEAM */
+Owner: Nat Atana
+Role: Senior AI Full-Stack Engineer and Technical Lead
+Site: https://natatana.netlify.app/
+Email: natatana1213@gmail.com
+LinkedIn: https://www.linkedin.com/in/nat-atana-964071418/
+GitHub: https://github.com/Nat-Atana
+
+/* SITE */
+Name: Nat Atana Portfolio
+Description: Portfolio for production AI, cloud architecture, full-stack engineering, and technical leadership.
+Standards: HTML5, CSS3, React, Vite
+Language: English
