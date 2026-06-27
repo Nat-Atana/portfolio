@@ -1,11 +1,12 @@
 import { getSectionHref } from '../lib/routing';
+import logoMark from '../../favicon.svg';
 
 export function Header({ menuOpen, onCloseMenu, onToggleMenu, onToggleTheme, theme }) {
   return (
     <header className="site-header">
       <a className="brand" href={getSectionHref('home')} onClick={onCloseMenu} aria-label="Nat Atana, home">
         <span className="brand-mark" aria-hidden="true">
-          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="24" height="24" />
+          <img src={logoMark} alt="" width="24" height="24" />
         </span>
         <span>Nat Atana</span>
       </a>
@@ -58,7 +59,7 @@ export function Footer() {
     <footer className="site-footer section-shell">
       <a className="brand" href={getSectionHref('home')}>
         <span className="brand-mark" aria-hidden="true">
-          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="24" height="24" />
+          <img src={logoMark} alt="" width="24" height="24" />
         </span>
         <span>Nat Atana</span>
       </a>
