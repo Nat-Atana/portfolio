@@ -1725,20 +1725,34 @@ img {
     font-size: 1rem;
   }
   .hero-visual {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
     width: calc(100% - 24px);
     margin: 35px auto 0;
   }
   .portrait-shell,
   .portrait-shell picture,
   .portrait-shell img {
+    grid-column: 1 / -1;
     min-height: 380px;
     height: min(480px, 125vw);
   }
+  .floating-chip {
+    position: static;
+    z-index: 1;
+    justify-content: flex-start;
+    min-width: 0;
+    animation: none;
+  }
+  .floating-chip span {
+    white-space: normal;
+  }
   .chip-ai {
-    left: -15px;
+    grid-column: 1;
   }
   .chip-cloud {
-    right: -15px;
+    grid-column: 2;
   }
   .metric-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1923,6 +1937,13 @@ img {
   }
   .hero-tech {
     line-height: 1.8;
+  }
+  .hero-visual {
+    grid-template-columns: 1fr;
+  }
+  .chip-ai,
+  .chip-cloud {
+    grid-column: 1;
   }
   .portrait-shell,
   .portrait-shell picture,
