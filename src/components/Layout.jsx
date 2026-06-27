@@ -4,7 +4,9 @@ export function Header({ menuOpen, onCloseMenu, onToggleMenu, onToggleTheme, the
   return (
     <header className="site-header">
       <a className="brand" href={getSectionHref('home')} onClick={onCloseMenu} aria-label="Nat Atana, home">
-        <span className="brand-mark">N</span>
+        <span className="brand-mark" aria-hidden="true">
+          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="24" height="24" />
+        </span>
         <span>Nat Atana</span>
       </a>
 
@@ -55,7 +57,9 @@ export function Footer() {
   return (
     <footer className="site-footer section-shell">
       <a className="brand" href={getSectionHref('home')}>
-        <span className="brand-mark">N</span>
+        <span className="brand-mark" aria-hidden="true">
+          <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="24" height="24" />
+        </span>
         <span>Nat Atana</span>
       </a>
       <p>AI · Cloud · Full-Stack Product Engineering</p>
