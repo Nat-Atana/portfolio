@@ -1,13 +1,47 @@
 import { getSectionHref } from '../lib/routing';
-import logoMark from '../../favicon.svg';
+
+function BrandMark({ id }) {
+  const gradientId = `${id}-gradient`;
+  const glowId = `${id}-glow`;
+
+  return (
+    <span className="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 128 128" focusable="false">
+        <defs>
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#7c3aed" />
+            <stop offset="100%" stopColor="#0ea5e9" />
+          </linearGradient>
+          <filter id={glowId}>
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feMerge>
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <circle
+          cx="64"
+          cy="64"
+          r="56"
+          fill="none"
+          stroke={`url(#${gradientId})`}
+          strokeWidth="4"
+          opacity="0.7"
+          filter={`url(#${glowId})`}
+        />
+        <polygon points="64,20 98,40 98,88 64,108 30,88 30,40" fill="#0b1020" stroke={`url(#${gradientId})`} strokeWidth="4" />
+        <path d="M70 28 L50 62 L64 62 L56 100 L82 54 L68 54 Z" fill={`url(#${gradientId})`} filter={`url(#${glowId})`} />
+      </svg>
+    </span>
+  );
+}
 
 export function Header({ menuOpen, onCloseMenu, onToggleMenu, onToggleTheme, theme }) {
   return (
     <header className="site-header">
       <a className="brand" href={getSectionHref('home')} onClick={onCloseMenu} aria-label="Nat Atana, home">
-        <span className="brand-mark" aria-hidden="true">
-          <img src={logoMark} alt="" width="24" height="24" />
-        </span>
+        <BrandMark id="header-brand-mark" />
         <span>Nat Atana</span>
       </a>
 
@@ -57,10 +91,8 @@ export function Header({ menuOpen, onCloseMenu, onToggleMenu, onToggleTheme, the
 export function Footer() {
   return (
     <footer className="site-footer section-shell">
-      <a className="brand" href={getSectionHref('home')}>
-        <span className="brand-mark" aria-hidden="true">
-          <img src={logoMark} alt="" width="24" height="24" />
-        </span>
+      <a className="brand" href={getSectionHref('home')} aria-label="Nat Atana, home">
+        <BrandMark id="footer-brand-mark" />
         <span>Nat Atana</span>
       </a>
       <p>AI · Cloud · Full-Stack Product Engineering</p>
