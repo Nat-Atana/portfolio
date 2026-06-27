@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Nat Atana — Senior AI Full-Stack Engineer</title>
+  <desc id="desc">Open Graph preview image for Nat Atana's engineering portfolio.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#050611"/>
+      <stop offset="0.48" stop-color="#101632"/>
+      <stop offset="1" stop-color="#062b34"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#b49aff"/>
+      <stop offset="0.52" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="130" r="230" fill="#38bdf8" opacity="0.16"/>
+  <circle cx="120" cy="530" r="260" fill="#8b5cf6" opacity="0.18"/>
+  <path d="M88 92h1024v446H88z" fill="none" stroke="#adbcff" stroke-opacity="0.2"/>
+  <text x="96" y="150" fill="#5eead4" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="5">AI · CLOUD · FULL-STACK</text>
+  <text x="96" y="292" fill="#f5f7ff" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="800">Nat Atana</text>
+  <text x="96" y="386" fill="url(#accent)" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">Senior AI Full-Stack Engineer</text>
+  <text x="96" y="466" fill="#c1c8dc" font-family="Arial, Helvetica, sans-serif" font-size="32">React · Next.js · Node.js · Python · AWS · MLOps</text>
+  <text x="96" y="524" fill="#8c96b2" font-family="Arial, Helvetica, sans-serif" font-size="24">Production AI systems, technical leadership, and measurable product impact</text>
+</svg>
