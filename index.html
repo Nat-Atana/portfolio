@@ -121,37 +121,39 @@
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
-      gtag('config', 'G-FDZNQ9120Z');
 
       // Analytics is useful, but it should not compete with the portfolio's
       // critical content on slower mobile connections.
       window.addEventListener(
         'load',
         function () {
+          var analyticsLoaded = false;
           var loadAnalytics = function () {
+            if (analyticsLoaded) {
+              return;
+            }
+            analyticsLoaded = true;
             var script = document.createElement('script');
             script.async = true;
             script.src = 'https://www.googletagmanager.com/gtag/js?id=G-FDZNQ9120Z';
+            script.onload = function () {
+              gtag('js', new Date());
+              gtag('config', 'G-FDZNQ9120Z');
+            };
             document.head.appendChild(script);
           };
 
-          if ('requestIdleCallback' in window) {
-            window.requestIdleCallback(loadAnalytics, { timeout: 2500 });
-          } else {
-            window.setTimeout(loadAnalytics, 1500);
-          }
+          ['pointerdown', 'keydown', 'touchstart'].forEach(function (eventName) {
+            window.addEventListener(eventName, loadAnalytics, { once: true, passive: true });
+          });
+
+          window.setTimeout(loadAnalytics, 30000);
         },
         { once: true },
       );
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="image" href="/src/assets/profile-image.avif" type="image/avif" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>

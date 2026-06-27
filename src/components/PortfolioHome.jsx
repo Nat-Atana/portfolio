@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import profileImageAvif from '../assets/profile-image.avif';
-import profileImage from '../assets/profile-image.png';
 import profileImageWebp from '../assets/profile-image.webp';
 import resumePdf from '../../resume.pdf';
 import { expertise, experience, projects, strengths } from '../data/portfolioData';
@@ -80,7 +79,7 @@ function HeroSection() {
           <picture>
             <source srcSet={profileImageAvif} type="image/avif" />
             <source srcSet={profileImageWebp} type="image/webp" />
-            <img src={profileImage} alt="Nat Atana" width="960" height="1084" decoding="async" fetchPriority="high" />
+            <img src={profileImageWebp} alt="Nat Atana" width="960" height="1084" decoding="async" fetchPriority="high" loading="eager" />
           </picture>
           <div className="portrait-gradient" />
           <div className="portrait-copy">

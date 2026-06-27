@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { PageShell } from './components/Layout';
+import PortfolioHome from './components/PortfolioHome';
 import { caseStudies } from './data/portfolioData';
 import { usePageEffects } from './hooks/usePageEffects';
 import { useProjectNavigation } from './hooks/useProjectNavigation';
@@ -8,7 +9,6 @@ import { getStoredTheme, persistTheme } from './lib/theme';
 import { normalizeRoutePath } from './lib/routing';
 
 const CaseStudyPage = lazy(() => import('./components/CaseStudyPage'));
-const PortfolioHome = lazy(() => import('./components/PortfolioHome'));
 
 function App() {
   const [theme, setTheme] = useState(getStoredTheme);
